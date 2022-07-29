@@ -386,7 +386,12 @@ This section provides detailed lists of changes by :ref:`library <libraries>`.
 Binary libraries
 ----------------
 
-|no_changes_yet_note|
+* :ref:`liblwm2m_carrier_readme` library:
+
+  * Updated to v0.30.1.
+    See the :ref:`liblwm2m_carrier_changelog` for detailed information.
+  * Projects that use the LwM2M carrier library cannot use TF-M for this release, since the LwM2M carrier library requires hard floating point.
+    For more information, see the :ref:`TF-M <ug_tfm>` documentation.
 
 Bluetooth libraries and services
 --------------------------------
@@ -545,6 +550,7 @@ Other libraries
 
   * Updated :c:func:`emds_entry_add` to no longer use heap, but instead require a pointer to the dynamic entry structure :c:struct `emds_dynamic_entry`.
     The dynamic entry structure should be allocated in advance.
+
 
 Common Application Framework (CAF)
 ----------------------------------
